@@ -87,27 +87,28 @@ class PlayState extends FlxState
 
         for (dir in _directions)
         {
+            var p:FlxPoint = null;
+
             if (FlxG.keys.pressed.UP)
             {
-                _player.setVelocity(new FlxPoint(0, -_speed));
-
+                p = new FlxPoint(0, -_speed);
             }
             else if (FlxG.keys.pressed.DOWN)
             {
-                _player.setVelocity(new FlxPoint(0, _speed));
+                p = new FlxPoint(0, _speed);
 
             }
             else if (FlxG.keys.pressed.LEFT)
             {
-                _player.setVelocity(new FlxPoint(-_speed,0));
+                p = new FlxPoint(-_speed,0);
 
             }
             else if (FlxG.keys.pressed.RIGHT)
             {
-                _player.setVelocity(new FlxPoint(_speed,0));
-
+                p = new FlxPoint(_speed,0);
             }
 
+            _player.setVelocity(p);
         }
 
     }
