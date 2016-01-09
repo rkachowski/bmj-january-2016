@@ -10,3 +10,5 @@
 * haxeflixel
 
 ### notes
+
+* bayeux tapestry images lovingly pilfered from http://bayeux.datensalat.net/
