@@ -1,5 +1,6 @@
 package;
 
+import flixel.addons.display.FlxGridOverlay;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
@@ -18,8 +19,14 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 		super.create();
+
+        setupBackground();
 	}
-	
+
+    private function setupBackground():Void
+    {
+        var bg = FlxGridOverlay.create(32,32,FlxG.width,FlxG.height * 3);
+    }
 	/**
 	 * Function that is called when this state is destroyed - you might want to 
 	 * consider setting all objects this state uses to null to help garbage collection.
